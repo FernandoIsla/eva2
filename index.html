@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeslaSys Chile - Soporte Técnico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <span class="company-name">TeslaSys Chile</span>
+            <h1>Sistema de Registro de Solicitudes de Soporte</h1>
+            <span class="header-tag">Soporte TI</span>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="form-section">
+            <h2>Nueva Solicitud de Soporte</h2>
+
+            <form id="form-solicitud" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre del colaborador</label>
+                    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Área de trabajo</label>
+                    <input type="text" id="area" placeholder="Ingresa el área de trabajo">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo de solicitud</label>
+                    <select id="tipo">
+                        <option value="">Seleccione una opción</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Software">Software</option>
+                        <option value="Redes">Redes</option>
+                        <option value="Seguridad">Seguridad</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción del problema</label>
+                    <textarea id="descripcion" rows="4" placeholder="Describe el problema que presentas..."></textarea>
+                </div>
+
+                <div id="mensaje-feedback" class="feedback-message hidden"></div>
+
+                <div class="button-group">
+                    <button type="button" id="btn-registrar" class="btn-primary">Registrar Solicitud</button>
+                    <button type="button" id="btn-limpiar" class="btn-secondary">Limpiar Formulario</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Solicitudes Registradas</h2>
+
+            <div class="table-responsive">
+                <table id="tabla-solicitudes">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Nombre</th>
+                            <th>Área</th>
+                            <th>Tipo de Solicitud</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-solicitudes">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="total-counter">
+                <p>Total de solicitudes registradas: <span id="contador-total">0</span></p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
