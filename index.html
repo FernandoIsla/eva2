@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -10,81 +10,100 @@
 
 <body>
 
-    <header class="main-header">
-        <div class="header-container">
-            <span class="company-name">TeslaSys Chile</span>
-            <h1>Sistema de Registro de Solicitudes de Soporte</h1>
-            <span class="header-tag">Soporte TI</span>
-        </div>
-    </header>
-
-    <main class="dashboard-container">
-
-        <section class="form-section">
-            <h2>Nueva Solicitud de Soporte</h2>
-
-            <form id="form-solicitud" novalidate>
-                <div class="form-group">
-                    <label for="nombre">Nombre del colaborador</label>
-                    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
-                </div>
-
-                <div class="form-group">
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
-                </div>
-
-                <div class="form-group">
-                    <label for="area">Área de trabajo</label>
-                    <input type="text" id="area" placeholder="Ingresa el área de trabajo">
-                </div>
-
-                <div class="form-group">
-                    <label for="tipo">Tipo de solicitud</label>
-                    <select id="tipo">
-                        <option value="">Seleccione una opción</option>
-                        <option value="Hardware">Hardware</option>
-                        <option value="Software">Software</option>
-                        <option value="Redes">Redes</option>
-                        <option value="Seguridad">Seguridad</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="descripcion">Descripción del problema</label>
-                    <textarea id="descripcion" rows="4" placeholder="Describe el problema que presentas..."></textarea>
-                </div>
-
-                <div id="mensaje-feedback" class="feedback-message hidden"></div>
-
-                <div class="button-group">
-                    <button type="button" id="btn-registrar" class="btn-primary">Registrar Solicitud</button>
-                    <button type="button" id="btn-limpiar" class="btn-secondary">Limpiar Formulario</button>
-                </div>
-            </form>
-        </section>
-
-        <section class="table-section">
-            <h2>Solicitudes Registradas</h2>
-
-            <div class="table-responsive">
-                <table id="tabla-solicitudes">
-                    <thead>
-                        <tr>
-                            <th>N°</th>
-                            <th>Nombre</th>
-                            <th>Área</th>
-                            <th>Tipo de Solicitud</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody id="lista-solicitudes">
-                    </tbody>
-                </table>
+    <nav class="top-nav">
+        <div class="nav-wrapper">
+            <div class="brand">
+                <span class="logo-dot"></span>
+                <span class="brand-name">TeslaSys Chile</span>
             </div>
+            <div class="app-title">Sistema de Registro de Solicitudes de Soporte</div>
 
-            <div class="total-counter">
-                <p>Total de solicitudes registradas: <span id="contador-total">0</span></p>
+            <div class="nav-controls">
+                <button type="button" id="btn-theme" class="btn-theme-toggle">
+                    <span id="theme-text">Modo Claro</span>
+                </button>
+                <div class="user-badge">Soporte TI</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="portal-layout">
+
+        <aside class="sidebar-form">
+            <div class="form-card">
+                <div class="form-header">
+                    <h2>Nueva Solicitud de Soporte</h2>
+                </div>
+
+                <form id="form-solicitud" novalidate>
+                    <div class="input-stack">
+                        <div class="field">
+                            <label for="nombre">Nombre del colaborador</label>
+                            <input type="text" id="nombre" placeholder="Ej. Fernando Isla">
+                        </div>
+
+                        <div class="field">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
+                        </div>
+
+                        <div class="field">
+                            <label for="area">Área de trabajo</label>
+                            <input type="text" id="area" placeholder="Ingresa el área de trabajo">
+                        </div>
+
+                        <div class="field">
+                            <label for="tipo">Tipo de solicitud</label>
+                            <select id="tipo">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                                <option value="Redes">Redes</option>
+                                <option value="Seguridad">Seguridad</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="descripcion">Descripción del problema</label>
+                            <textarea id="descripcion" rows="3"
+                                placeholder="Describe el problema que presentas..."></textarea>
+                        </div>
+                    </div>
+
+                    <div id="mensaje-feedback" class="msg-box hidden"></div>
+
+                    <div class="form-actions">
+                        <button type="button" id="btn-registrar" class="btn-action primary">Registrar Solicitud</button>
+                        <button type="button" id="btn-limpiar" class="btn-action secondary">Limpiar Formulario</button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div class="content-card">
+                <div class="content-header">
+                    <h2>Solicitudes Registradas</h2>
+                    <div class="counter-badge">
+                        Total de solicitudes registradas: <span id="contador-total">0</span>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="tabla-solicitudes">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">N°</th>
+                                <th>Nombre</th>
+                                <th>Área</th>
+                                <th>Tipo de Solicitud</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-solicitudes">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 

@@ -1,0 +1,323 @@
+html[data-theme="dark"] {
+    --bg-base: #0f0f11;
+    --bg-surface: #161619;
+    --bg-input: #0f0f11;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --border-line: #27272a;
+    --brand-color: #ffffff;
+    --bg-row-hover: rgba(255, 255, 255, 0.03);
+    --header-card-bg: #202024;
+    --table-th-bg: #111113;
+}
+
+html[data-theme="light"] {
+    --bg-base: #e4e4e7;
+    --bg-surface: #ffffff;
+    --bg-input: #f4f4f5;
+    --text-primary: #18181b;
+    --text-secondary: #71717a;
+    --border-line: #d4d4d8;
+    --brand-color: #18181b;
+    --bg-row-hover: rgba(0, 0, 0, 0.03);
+    --header-card-bg: #27272a;
+    --table-th-bg: #f4f4f5;
+}
+
+:root {
+    --success: #10b981;
+    --error: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.top-nav {
+    background-color: var(--bg-surface);
+    border-bottom: 2px solid var(--border-line);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--brand-color);
+    border-radius: 50%;
+}
+
+.brand-name {
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.app-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Conmutador de Tema */
+.btn-theme-toggle {
+    background-color: var(--bg-base);
+    border: 2px solid var(--border-line);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.btn-theme-toggle:hover {
+    border-color: var(--brand-color);
+}
+
+.user-badge {
+    background-color: var(--bg-input);
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    border: 2px solid var(--border-line);
+}
+
+.portal-layout {
+    max-width: 1600px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+    .portal-layout {
+        grid-template-columns: 380px 1fr;
+    }
+}
+
+.form-card,
+.content-card {
+    background-color: var(--bg-surface);
+    border: 2px solid var(--border-line);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .form-card {
+        position: sticky;
+        top: 6.5rem;
+    }
+}
+
+.form-header,
+.content-header {
+    background-color: var(--header-card-bg);
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border-line);
+}
+
+.form-header h2,
+.content-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.form-card form,
+.content-card .table-container-wrapper {
+    padding: 1.5rem;
+}
+
+.input-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.field input,
+.field select,
+.field textarea {
+    background-color: var(--bg-input);
+    border: 2px solid var(--border-line);
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--brand-color);
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.btn-action {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-action.primary {
+    background-color: var(--text-primary);
+    color: var(--bg-surface);
+}
+
+.btn-action.primary:hover {
+    filter: brightness(0.9);
+}
+
+.btn-action.secondary {
+    background-color: transparent;
+    border: 2px solid var(--border-line);
+    color: var(--text-primary);
+}
+
+.btn-action.secondary:hover {
+    background-color: var(--bg-base);
+}
+
+.counter-badge {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-container {
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    padding: 1rem;
+    background-color: var(--table-th-bg);
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    border: 2px solid var(--border-line);
+}
+
+table td {
+    padding: 1rem;
+    border: 2px solid var(--border-line);
+    font-size: 0.9rem;
+    background-color: var(--bg-surface);
+}
+
+table tbody tr:hover td {
+    background-color: var(--bg-row-hover);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    border: 2px solid var(--border-line);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+}
+
+.msg-box {
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1.25rem;
+    font-weight: 700;
+    border: 2px solid currentColor;
+}
+
+.msg-box.success {
+    background-color: transparent;
+    color: var(--success);
+}
+
+.msg-box.error {
+    background-color: transparent;
+    color: var(--error);
+}
+
+.hidden {
+    display: none;
+}
