@@ -84,9 +84,6 @@
             <div class="content-card">
                 <div class="content-header">
                     <h2>Solicitudes Registradas</h2>
-                    <div class="counter-badge">
-                        Total de solicitudes registradas: <span id="contador-total">0</span>
-                    </div>
                 </div>
 
                 <div class="table-container">
@@ -98,18 +95,31 @@
                                 <th>Área</th>
                                 <th>Tipo de Solicitud</th>
                                 <th>Descripción</th>
+                                <th style="width: 60px;"></th>
                             </tr>
                         </thead>
                         <tbody id="lista-solicitudes">
                         </tbody>
                     </table>
                 </div>
+
+                <div class="info-banner">
+                    <span class="info-icon">ℹ</span>
+                    <span>Total de solicitudes registradas: <span id="contador-total">0</span></span>
+                </div>
             </div>
         </section>
 
     </main>
 
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-left">TeslaSys Chile - Área de Soporte TI</div>
+            <div class="footer-center">Desarrollado para mejorar la experiencia de nuestros colaboradores</div>
+            <div class="footer-right">&lt;/&gt;</div>
+        </div>
+    </footer>
+
     <script src="app.js"></script>
 </body>
-
 </html>
