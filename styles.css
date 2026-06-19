@@ -209,6 +209,42 @@ body {
     border-color: var(--brand-color);
 }
 
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group.align-top {
+    align-items: flex-start;
+}
+
+.input-icon-left {
+    position: absolute;
+    left: 0.95rem;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    pointer-events: none;
+    transition: color 0.15s;
+}
+
+.input-group.align-top .input-icon-left {
+    top: 0.85rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding-left: 2.6rem;
+}
+
+.input-group:focus-within .input-icon-left {
+    color: var(--brand-color);
+}
+
 .form-actions {
     display: flex;
     flex-direction: column;

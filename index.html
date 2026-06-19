@@ -39,34 +39,58 @@
                     <div class="input-stack">
                         <div class="field">
                             <label for="nombre">Nombre del colaborador</label>
-                            <input type="text" id="nombre" placeholder="Ej. Fernando Isla">
+                            <div class="input-group">
+                                <span class="input-icon-left">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                </span>
+                                <input type="text" id="nombre" placeholder="Ej. Fernando Isla">
+                            </div>
                         </div>
 
                         <div class="field">
                             <label for="correo">Correo electrónico</label>
-                            <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
+                            <div class="input-group">
+                                <span class="input-icon-left">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </span>
+                                <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
+                            </div>
                         </div>
 
                         <div class="field">
                             <label for="area">Área de trabajo</label>
-                            <input type="text" id="area" placeholder="Ingresa el área de trabajo">
+                            <div class="input-group">
+                                <span class="input-icon-left">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                                </span>
+                                <input type="text" id="area" placeholder="Ingresa el área de trabajo">
+                            </div>
                         </div>
 
                         <div class="field">
                             <label for="tipo">Tipo de solicitud</label>
-                            <select id="tipo">
-                                <option value="">Seleccione una opción</option>
-                                <option value="Hardware">Hardware</option>
-                                <option value="Software">Software</option>
-                                <option value="Redes">Redes</option>
-                                <option value="Seguridad">Seguridad</option>
-                            </select>
+                            <div class="input-group">
+                                <span class="input-icon-left">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                                </span>
+                                <select id="tipo">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="Hardware">Hardware</option>
+                                    <option value="Software">Software</option>
+                                    <option value="Redes">Redes</option>
+                                    <option value="Seguridad">Seguridad</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="field">
                             <label for="descripcion">Descripción del problema</label>
-                            <textarea id="descripcion" rows="3"
-                                placeholder="Describe el problema que presentas..."></textarea>
+                            <div class="input-group align-top">
+                                <span class="input-icon-left">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </span>
+                                <textarea id="descripcion" rows="3" placeholder="Describe el problema que presentas..."></textarea>
+                            </div>
                         </div>
                     </div>
 
