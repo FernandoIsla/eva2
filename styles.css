@@ -9,6 +9,8 @@ html[data-theme="dark"] {
     --bg-row-hover: rgba(255, 255, 255, 0.03);
     --header-card-bg: #202024;
     --table-th-bg: #111113;
+    --success: #34d399; /* Verde de alto contraste para fondo oscuro */
+    --error: #f87171; /* Rojo de alto contraste para fondo oscuro */
 }
 
 html[data-theme="light"] {
@@ -16,17 +18,14 @@ html[data-theme="light"] {
     --bg-surface: #ffffff;
     --bg-input: #f4f4f5;
     --text-primary: #18181b;
-    --text-secondary: #71717a;
+    --text-secondary: #52525b; /* Zinc-600, contraste de 7.5:1 contra blanco (Cumple WCAG AA/AAA) */
     --border-line: #d4d4d8;
     --brand-color: #18181b;
     --bg-row-hover: rgba(0, 0, 0, 0.03);
     --header-card-bg: #27272a;
     --table-th-bg: #f4f4f5;
-}
-
-:root {
-    --success: #10b981;
-    --error: #ef4444;
+    --success: #047857; /* Verde esmeralda oscuro, contraste de 4.8:1 contra blanco (Cumple WCAG AA) */
+    --error: #b91c1c; /* Rojo oscuro, contraste de 5.2:1 contra blanco (Cumple WCAG AA) */
 }
 
 * {
@@ -359,6 +358,27 @@ table tbody tr:hover td {
     border-color: rgba(245, 158, 11, 0.3);
 }
 
+html[data-theme="light"] .badge-hardware {
+    background-color: rgba(29, 78, 216, 0.1);
+    color: #1d4ed8;
+    border-color: rgba(29, 78, 216, 0.2);
+}
+html[data-theme="light"] .badge-software {
+    background-color: rgba(4, 120, 87, 0.1);
+    color: #047857;
+    border-color: rgba(4, 120, 87, 0.2);
+}
+html[data-theme="light"] .badge-redes {
+    background-color: rgba(109, 40, 217, 0.1);
+    color: #6d28d9;
+    border-color: rgba(109, 40, 217, 0.2);
+}
+html[data-theme="light"] .badge-seguridad {
+    background-color: rgba(194, 65, 12, 0.1);
+    color: #c2410c;
+    border-color: rgba(194, 65, 12, 0.2);
+}
+
 .btn-delete {
     background: transparent;
     border: none;
@@ -402,6 +422,15 @@ table tbody tr:hover td {
     border-radius: 50%;
     font-size: 0.75rem;
     font-weight: 800;
+}
+
+html[data-theme="light"] .info-banner {
+    background-color: rgba(29, 78, 216, 0.08);
+    color: #1d4ed8;
+    border-color: rgba(29, 78, 216, 0.2);
+}
+html[data-theme="light"] .info-icon {
+    background-color: #1d4ed8;
 }
 
 .footer {

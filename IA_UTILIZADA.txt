@@ -1,1 +1,18 @@
+Herramienta utilizada:
+- Antigravity IDE (con Gemini Code Assist)
+
+---------------------------------------------------------
+
+Prompt 1: Revisa el pdf para asegurar que todos los requerimientos se encuentren dentro del código y analiza el código para ver cosas que se podrían agregar, solo quiero opiniones y no cambios dentro del código de forma automática
+
+Respuesta resumida: Requerimientos cumplidos, cosas para agregar: Boton de eliminar, iconos con tipo de solicitud, banner inferior del total de solicitudes y pie de pagina
+
+Prompt 2: Mejora el diseño visual con iconos en el formulario, que sea sutilies y espera mi revision y confirmación antes de cualquier cambio
+
+Respuesta: sin respuesta, solo los cambios dentro del código para su revision y aceptación
+
+Prompt 3: mejora el contraste de color para mayor comodidad visual
+
+respuesta: se aplicaron mejoras en al apleta de colores para cumploes los estandares de contraste de la WCAG (Nivel AA)
+
 
